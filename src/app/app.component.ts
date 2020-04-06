@@ -9,15 +9,15 @@ export class AppComponent {
   title = 'calculator';
 
   tempNum = '0';
-  sumNum = 'sum';
+  sumNum = 'total';
 
   public getNumber(v: string) {
     this.tempNum === '0' ? this.tempNum = v : this.tempNum += v;
   }
 
-  clear(v: string) {
+  clear() {
     this.tempNum = '0';
-    this.sumNum = 'sum';
+    this.sumNum = 'total';
   }
 
   getOperation(v: string) {

@@ -1,36 +1,46 @@
-<div class="con">
-    <div class="title">
-        <div class="img">
-            <i class="fa fa-calculator"></i>
+<div class="body">
+    <div class="con">
+        <div class="title">
+            <div class="img">
+                <i class="fa fa-calculator"></i>
+            </div>
+            <div class="header">
+                <h4>Calculator</h4>
+            </div>
         </div>
-        <div class="header">
-            <h4>Calculator</h4>
+        <div class="txt">
+            <input [(ngModel)]='tempNum' type="text" class="temp-num" disabled>
+            <input [(ngModel)]='sumNum' type="text" class="sum-num" disabled>
+        </div>
+        <div class="num">
+            <div class="item-ce" value="all-clear" (click)="clear()">CE</div>
+
+            <div class="item-div" (click)="getOperation('/')">÷</div>
+
+            <div class="item-mid" (click)="getNumber('7')">7</div>
+            <div class="item-mid" (click)="getNumber('8')">8</div>
+            <div class="item-mid" (click)="getNumber('9')">9</div>
+
+            <div class="item-mid-cac" (click)="getOperation('*')">×</div>
+
+            <div class="item-mid" (click)="getNumber('4')">4</div>
+            <div class="item-mid" (click)="getNumber('5')">5</div>
+            <div class="item-mid" (click)="getNumber('6')">6</div>
+
+            <div class="item-mid-cac" (click)="getOperation('-')">-</div>
+
+            <div class="item-mid" (click)="getNumber('1')">1</div>
+            <div class="item-mid" (click)="getNumber('2')">2</div>
+            <div class="item-mid" (click)="getNumber('3')">3</div>
+
+            <div class="item-mid-cac" (click)="getOperation('+')">+</div>
+
+            <div class="item-o" (click)="getNumber('0')">0</div>
+            <div class="item-dot" (click)="getNumber('.')">.</div>
+
+            <div class="item-sum" (click)="getOperationEval()">=</div>
         </div>
     </div>
-    <div class="txt">
-        <input [(ngModel)]='tempNum' type="text" class="temp-num">
-        <input [(ngModel)]='sumNum' type="text" class="sum-num">
-    </div>
-    <div class="num">
-        <div class="item-ce" value="all-clear" (click)="clear('0')">CE</div>
-        <div class="item-div" (click)="getOperation('/')">÷</div>
-        <div class="item-mid" (click)="getNumber('7')">7</div>
-        <div class="item-mid" (click)="getNumber('8')">8</div>
-        <div class="item-mid" (click)="getNumber('9')">9</div>
-        <div class="item-mid-cac" (click)="getOperation('*')">×</div>
-        <div class="item-mid" (click)="getNumber('4')">4</div>
-        <div class="item-mid" (click)="getNumber('5')">5</div>
-        <div class="item-mid" (click)="getNumber('6')">6</div>
-        <div class="item-mid-cac" (click)="getOperation('-')">-</div>
-        <div class="item-mid" (click)="getNumber('1')">1</div>
-        <div class="item-mid" (click)="getNumber('2')">2</div>
-        <div class="item-mid" (click)="getNumber('3')">3</div>
-        <div class="item-mid-cac" (click)="getOperation('+')">+</div>
-        <div class="item-o" (click)="getNumber('0')">0</div>
-        <div class="item-dot" (click)="getNumber('.')">.</div>
-        <div class="item-sum" (click)="getOperationEval()">=</div>
-    </div>
+
 </div>
-
-
 <router-outlet></router-outlet>
